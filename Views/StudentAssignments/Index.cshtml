@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CollegeManagementSystem.Models.StudentAssignment>
+
+@{
+    ViewBag.Title = "Student Assignments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignmentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModuleCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModuleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignmentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModuleCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModuleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID })
+        </td>
+    </tr>
+}
+
+</table>

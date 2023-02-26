@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>College Management System</h1>
+    <p class="lead">This Web Based Application developed on .Net using MVC Pattern is created to manage various CRUD operations through basic web forms and complex web forms.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Instruction Manual &raquo;</a></p>
+</div>
+
+<div class="row mt-5 mb-4 justify-content-center">
+    <div class="col-md-6">
+        <div class="card text-white bg-dark">
+            <div class="card-header text-center">
+                <h4 class="font-weight-bold">Basic Web Forms</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Persons" }, Request.Url.Scheme)">
+                        <span>Persons</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "StudentViewModels" }, Request.Url.Scheme)">
+                        <span>Students</span>
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "TeacherViewModels" }, Request.Url.Scheme)">
+                        <span>Teachers</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Departments" }, Request.Url.Scheme)">
+                        <span>Departments</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Addresses" }, Request.Url.Scheme)">
+                        <span>Addresses</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Modules" }, Request.Url.Scheme)">
+                        <span>Modules</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-white bg-dark">
+            <div class="card-header text-center">
+                <h4 class="font-weight-bold">Complex Web Forms</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "TeacherModuleViewModels" }, Request.Url.Scheme)">
+                        <span>Teacher Module Records</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "StudentFeeRecords" }, Request.Url.Scheme)">
+                        <span>Student Fee Payment Records</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="@Url.Action("Index", null, new { area = string.Empty, controller = "StudentAssignments" }, Request.Url.Scheme)">
+                        <span>Student Assignment Records</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

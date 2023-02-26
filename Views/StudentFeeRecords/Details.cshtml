@@ -1,0 +1,114 @@
+﻿@model CollegeManagementSystem.Models.StudentFeeRecord
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentFeeRecord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SemesterFeeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SemesterFeeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SemesterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SemesterName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

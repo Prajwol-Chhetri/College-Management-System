@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CollegeManagementSystem.Models.Module>
+
+@{
+    ViewBag.Title = "Modules";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ModuleCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModuleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditHours)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModuleCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModuleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditHours)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ModuleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ModuleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ModuleID })
+        </td>
+    </tr>
+}
+
+</table>
